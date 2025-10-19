@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — BlueFlow Plumbing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+     <a class="brand" href="index.html">
+       <img src="assets/images/pngtree-faucet-water-droplets-save-water-illustration-png-image_13453482.png" alt="BlueFlow logo" class="site-logo" />
+       <span class="brand-text">BlueFlow</span>
+     </a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html#services-faq">FAQ</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Contact & Request Estimate</h1>
+    <p class="section-sub">Fill out the form and we'll follow up within 24 hours.</p>
+
+    <form id="contact-form" class="contact-form" novalidate>
+      <label>
+        Full name
+        <input type="text" name="name" id="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" id="email" required>
+      </label>
+      <label>
+        Phone
+        <input type="tel" name="phone" id="phone">
+      </label>
+      <label>
+        Message
+        <textarea name="message" id="message" rows="5" required></textarea>
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Send request</button>
+        <button type="reset" class="btn btn-outline">Reset</button>
+      </div>
+      <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
+    </form>
+
+    <section class="contact-map" style="margin-top:18px">
+      <h3>Our location</h3>
+      <div class="map-wrap">
+        <iframe width="100%" height="320" frameborder="0" src="https://www.google.com/maps?q=Toronto,ON&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+  <a class="brand" href="index.html"><img src="assets/images/pngtree-faucet-water-droplets-save-water-illustration-png-image_13453482.png" alt="BlueFlow logo" class="footer-logo" /><span class="brand-text">BlueFlow</span></a>
+      </div>
+      <div></div>
+      <div>
+        <p class="muted small">© <span id="year-contact"></span> BlueFlow. Demo for portfolio use.</p>
+        <p class="muted small footer-credit">Created by Thomas Sickinger</p>
+      </div>
+    </div>
+    <a href="#" class="jump-arrow" style="position:fixed;right:18px;bottom:18px;z-index:999" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

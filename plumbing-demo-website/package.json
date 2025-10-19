@@ -1,0 +1,23 @@
+{
+  "name": "plumbing-demo-website",
+  "version": "1.0.0",
+  "description": "A sophisticated demo website for a plumbing company showcasing services, about information, and contact details.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "keywords": [
+    "plumbing",
+    "website",
+    "demo",
+    "portfolio"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
