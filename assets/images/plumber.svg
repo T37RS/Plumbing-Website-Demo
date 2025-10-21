@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="100%" height="100%" fill="#f6fbff"/>
+  <g transform="translate(80,60)">
+    <rect x="0" y="0" width="1040" height="680" rx="14" fill="#eaf6ff" stroke="#d6edff"/>
+    <g transform="translate(60,40) scale(1)">
+      <rect x="0" y="0" width="400" height="560" rx="12" fill="#fff" stroke="#e6f2ff"/>
+      <circle cx="200" cy="120" r="80" fill="#0b74d1"/>
+      <rect x="460" y="60" width="420" height="120" rx="12" fill="#fff" stroke="#e6f2ff"/>
+      <text x="200" y="350" font-family="Inter,Arial" font-size="32" fill="#0b1220">Plumber image</text>
+      <text x="200" y="390" font-family="Inter,Arial" font-size="18" fill="#6b7280">Place plumber.jpg in assets/images</text>
+    </g>
+  </g>
+</svg>
