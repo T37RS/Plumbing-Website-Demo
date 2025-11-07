@@ -237,6 +237,36 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
       });
+
+    // Video preview load (optional): let a user paste a YouTube URL or embed URL and preview it
+    const videoLoadBtn = document.getElementById('video-load-btn');
+    if (videoLoadBtn) {
+      const input = document.getElementById('video-url-input');
+      const iframe = document.getElementById('service-preview-iframe');
+      const loadUrl = () => {
+        if (!iframe || !input) return;
+        let url = (input.value || '').trim();
+        if (!url) { iframe.src = ''; return; }
+        // try to normalize common YouTube links to embed URLs
+        try {
+          const u = new URL(url, window.location.href);
+          const host = u.hostname.toLowerCase();
+          if (host.includes('youtube.com')) {
+            const v = u.searchParams.get('v');
+            if (v) url = `https://www.youtube.com/embed/${v}`;
+          } else if (host.includes('youtu.be')) {
+            const v = u.pathname.replace(/^\//, '');
+            if (v) url = `https://www.youtube.com/embed/${v}`;
+          }
+        } catch (err) {
+          // not a valid absolute URL — pass through and let iframe handle it
+        }
+        iframe.src = url;
+      };
+      videoLoadBtn.addEventListener('click', loadUrl);
+      // allow Enter key in the input to load
+      if (input) input.addEventListener('keyup', (e) => { if (e.key === 'Enter') loadUrl(); });
+    }
     }
 });
 
